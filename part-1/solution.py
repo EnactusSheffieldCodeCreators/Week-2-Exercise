@@ -9,6 +9,13 @@ VIDEO_ID = "alTRvtmWi7k"
 SEARCH_WORDS = ["um", "uh"]
 
 def count_words(words, text):
+    """
+    Counts the number of times each of the words appears in the text.
+
+    :words: array of words to count
+    :text: string to count words in
+    :returns: number of times any of the words were detected in the text
+    """
     count = 0
     for word in words:
         pattern = "(?:^|\W)" + word + "(?:^|\W)" # Regex pattern matching
