@@ -23,7 +23,7 @@ def count_words(words, text):
     return count
 ```
 
-Above we have the function that counts the code in the number of times that one of the words appears in the text. I even added a docstring so you can see what each of the variables do but the lines that are probably the most confusing are likely to be:
+Above we have the function that counts the code in the number of times that one of the words appears in the text. I even added a docstring so you can see what each of the arguments do but the lines that are probably the most confusing are likely to be:
 
 ```python
 pattern = "(?:^|\W)" + word + "(?:^|\W)" # Regex pattern matching
