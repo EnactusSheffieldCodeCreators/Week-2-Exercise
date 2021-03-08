@@ -23,7 +23,7 @@ def count_words(words, text):
     return count
 ```
 
-Above we have the function that counts the code in the number of times that one of the words appears in the text. I even added a docstring so you can see what each of the variables do but the lines that are probably the most confusing are likely to be:
+Above we have the function that counts the code in the number of times that one of the words appears in the text. I even added a docstring so you can see what each of the arguments do but the lines that are probably the most confusing are likely to be:
 
 ```python
 pattern = "(?:^|\W)" + word + "(?:^|\W)" # Regex pattern matching
@@ -45,6 +45,10 @@ video_transcript = YouTubeTranscriptApi.get_transcript(VIDEO_ID)
 The above line tells us to get the transcript, but what format is it in. Well try printing it if you want to, or you can take a look at the example showing how it comes out in the [documentation](https://pypi.org/project/youtube-transcript-api/). But to summarize it gives us a list of individual captions, each one as a dictionary containing the text, start time and duration of the caption.
 
 This is why we have to loop over the video transcript because it doesn't give us all the text as one giant string.
+
+## Testing
+
+The astute among us may have noticed that there is another file called `solution-testing.py` in the part 1 folder, this runs unit testing on the code which we will get into later on but if you run `pytest solution-testing.py` then it should give you an output telling you that all the tests passed. All this means is that the code has validated that the function `count_words` is performing the way we would expect it to.
 
 ## That's All
 

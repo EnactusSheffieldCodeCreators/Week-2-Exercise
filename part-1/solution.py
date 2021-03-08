@@ -18,16 +18,16 @@ def count_words(words, text):
     """
     count = 0
     for word in words:
-        pattern = "(?:^|\W)" + word + "(?:^|\W)" # Regex pattern matching
+        pattern = r"(?:^|\W)" + word + r"(?:^|\W)" # Regex pattern matching
         matches = re.findall(pattern, text, re.IGNORECASE)
         count += len(matches)
     return count
     
+if __name__ == "__main__":
+    video_transcript = YouTubeTranscriptApi.get_transcript(VIDEO_ID)
+    um_uh_counter = 0
 
-video_transcript = YouTubeTranscriptApi.get_transcript(VIDEO_ID)
-um_uh_counter = 0
+    for section in video_transcript: # Transcript is separated into sections.
+        um_uh_counter += count_words(SEARCH_WORDS, section['text'])
 
-for section in video_transcript: # Transcript is separated into sections.
-    um_uh_counter += count_words(SEARCH_WORDS, section['text'])
-
-print("Counted {} \"ums\" or \"uhs\"".format(um_uh_counter))
+    print("Counted {} \"ums\" or \"uhs\"".format(um_uh_counter))
