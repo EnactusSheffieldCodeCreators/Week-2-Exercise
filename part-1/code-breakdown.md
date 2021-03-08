@@ -46,6 +46,10 @@ The above line tells us to get the transcript, but what format is it in. Well tr
 
 This is why we have to loop over the video transcript because it doesn't give us all the text as one giant string.
 
+## Testing
+
+The astute among us may have noticed that there is another file called `solution-testing.py` in the part 1 folder, this runs unit testing on the code which we will get into later on but if you run `pytest solution-testing.py` then it should give you an output telling you that all the tests passed. All this means is that the code has validated that the function `count_words` is performing the way we would expect it to.
+
 ## That's All
 
 Please come along to the mentoring session if any of this isn't clear or drop us a message on the discord server. Don't worry if it was hard, that was the idea of this week, getting stuck is good because you learn the process of getting un-stuck.
