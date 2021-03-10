@@ -23,7 +23,7 @@ Now that we have all this information from the video subtitles, the next challen
 ## Ideas for exercises.
 
 - Calculate words per minute.
-- ~~Find jack's catchphrase.~~
+- Find jack's catchphrase
 - Generate a word-cloud for the lecture.
 - Graph words per minute.
 - Graph his passion with time by plotting the inverse number of ums.
